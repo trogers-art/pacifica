@@ -166,6 +166,16 @@ nav {
   padding: 16px 20px;
 }
 
+.hero-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .hero-photo-main {
   grid-row: 1 / 3;
 }
@@ -379,6 +389,16 @@ nav {
   padding: 20px;
 }
 
+.intro-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .intro-photo::after {
   content: '';
   position: absolute;
@@ -494,6 +514,21 @@ nav {
   display: flex;
   align-items: flex-end;
   padding: 14px 16px;
+}
+
+.room-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.room-card:hover .room-photo img {
+  transform: scale(1.04);
 }
 
 .room-photo-label {

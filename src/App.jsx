@@ -9,6 +9,8 @@ const ROOMS = [
     desc: 'Clean, comfortable, and well-appointed. King bed, blackout curtains, and a private patio. Everything you need, nothing you don\'t.',
     amenities: ['King Bed', 'Free WiFi', 'Smart TV', 'Mini Fridge', 'Private Patio', 'Free Parking'],
     rate: 129,
+    img: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80&fit=crop',
+    imgAlt: 'Standard king hotel room with clean white bedding',
   },
   {
     id: 'deluxe',
@@ -17,6 +19,8 @@ const ROOMS = [
     desc: 'Two queen beds and a separate sitting area. Ideal for families or longer stays. Faces the courtyard with a view of the palms.',
     amenities: ['2 Queen Beds', 'Sitting Area', 'Free WiFi', 'Smart TV', 'Mini Fridge', 'Microwave', 'Free Parking'],
     rate: 159,
+    img: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&q=80&fit=crop',
+    imgAlt: 'Bright hotel suite with two queen beds',
   },
   {
     id: 'ocean',
@@ -25,6 +29,8 @@ const ROOMS = [
     desc: 'Our best room. King bed, full bathroom with walk-in shower, and a private balcony with an unobstructed view of the Pacific.',
     amenities: ['King Bed', 'Ocean View Balcony', 'Walk-in Shower', 'Free WiFi', 'Smart TV', 'Coffee Bar', 'Free Parking'],
     rate: 219,
+    img: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80&fit=crop',
+    imgAlt: 'Hotel room with ocean view balcony',
   },
 ]
 
@@ -135,13 +141,13 @@ function Hero() {
       <section className="hero">
         <div className="hero-photo-grid">
           <div className="hero-photo hero-photo-main">
-            <span className="hero-photo-label">Property exterior photo</span>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80&fit=crop" alt="California coastal scene at sunset" />
           </div>
           <div className="hero-photo">
-            <span className="hero-photo-label">Ocean view room</span>
+            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80&fit=crop" alt="Hotel room with ocean view" />
           </div>
           <div className="hero-photo">
-            <span className="hero-photo-label">Courtyard / pool area</span>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&fit=crop" alt="Huntington Beach California coastline" />
           </div>
         </div>
 
@@ -195,7 +201,7 @@ function Intro() {
       <div className="container">
         <div className="intro-inner">
           <div className="intro-photo">
-            <span className="intro-photo-label">Lobby / common area photo</span>
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=900&q=80&fit=crop" alt="Hotel courtyard with palm trees" />
           </div>
           <div>
             <div className="section-eyebrow">About the Lodge</div>
@@ -251,7 +257,7 @@ function Rooms() {
           {ROOMS.map((room) => (
             <div className="room-card" key={room.id}>
               <div className="room-photo">
-                <span className="room-photo-label">{room.name} photo</span>
+                <img src={room.img} alt={room.imgAlt} />
               </div>
               <div className="room-body">
                 <div className="room-type">{room.type}</div>
